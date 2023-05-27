@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "HOSPITAL";
+const SECRET_KEY = process.env.SECRET_KEY;
 const doctorauth = (req, res, next) => {
     try {
         let token = req.headers.authorization;

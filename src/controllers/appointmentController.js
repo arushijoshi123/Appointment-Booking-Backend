@@ -2,7 +2,7 @@ const doctorModel = require("../models/doctor");
 const patientModel = require("../models/patient");
 const patientauth = require("../middlewares/auth");
 const doctorauth = require("../middlewares/auth");
-const SECRET_KEY = "HOSPITAL";
+const SECRET_KEY = process.env.SECRET_KEY;
 const appointmentModel = require("../models/appointments");
 
 

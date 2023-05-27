@@ -6,7 +6,7 @@ const patientauth = require("../middlewares/auth");
 const appointmentModel = require("../models/appointments");
 
 
-const SECRET_KEY = "HOSPITAL";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Patient signup
 const signup = async (req, res) => {

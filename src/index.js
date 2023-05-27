@@ -3,16 +3,23 @@ const app =express();
 const mongoose= require("mongoose");
 const doctorRouter = require("./routes/doctorRoutes");
 const patientRouter = require("./routes/patientRoutes");
+const dotenv = require("dotenv");
+const cors = require("cors");
+dotenv.config()
 app.use(express.json());
+app.use(cors());//adds header to response from API
 app.use("/doctors",doctorRouter);
 app.use("/patients",patientRouter);
 app.get("/",(req,res)=>{
-    res.send("welcome to the project");
+    res.send("MINOR PROJECT BY ARUSHI , WELCOME!!!!");
 });
-mongoose.connect("mongodb+srv://joshiarushi025:1234@cluster0.v63uno1.mongodb.net/")
+
+const PORT =process.env.PORT || 8000;
+
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
-    app.listen(8000,()=>{
-        console.log("server started at port no. 8000");
+    app.listen(PORT,()=>{
+        console.log("server started at port no. ",+ PORT);
    });
 
 })
