@@ -4,7 +4,10 @@ const jwt = require("jsonwebtoken");
 const doctorauth = require("../middlewares/auth");
 const appointmentModel = require("../models/appointments");
 const { json } = require("express");
-const SECRET_KEY = "HOSPITAL";
+const dotenv = require("dotenv");
+dotenv.config()
+//require('dotenv').config();
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Doctor signup
 const signup = async (req, res) => {

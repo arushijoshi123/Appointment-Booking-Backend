@@ -2,6 +2,9 @@ const doctorModel = require("../models/doctor");
 const patientModel = require("../models/patient");
 const patientauth = require("../middlewares/auth");
 const doctorauth = require("../middlewares/auth");
+//require('dotenv').config();
+const dotenv = require("dotenv");
+dotenv.config()
 const SECRET_KEY = process.env.SECRET_KEY;
 const appointmentModel = require("../models/appointments");
 
