@@ -1,7 +1,7 @@
 ﻿# Appointment-Booking-Backend
 README
-
 Aarogya Care Platform
+deployed on RENDER cloud : https://aarogya-care.onrender.com/
 
 The Aarogya Care platform is a web-based application designed to revolutionize the way patients and doctors interact and manage appointments. Built on Node.js, Express.js, and MongoDB, it offers a user-friendly interface and seamless communication for improved healthcare experiences.
 
